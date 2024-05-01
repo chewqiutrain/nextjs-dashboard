@@ -1,0 +1,14 @@
+name: njs-dashboard
+
+services:
+  postgres:
+    image: postgres:15.6-bullseye
+    ports:
+      - 15432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - njs-dashboard-db:/var/lib/postgresql/data
+
+volumes:
+  njs-dashboard-db: 
